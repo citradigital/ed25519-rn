@@ -1,4 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ed25519rn">
+          package="digital.citra.ed25519rn">
 
 </manifest>

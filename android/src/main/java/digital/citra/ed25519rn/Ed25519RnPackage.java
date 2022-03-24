@@ -1,4 +1,4 @@
-package com.ed25519rn;
+package digital.citra.ed25519rn;
 
 import androidx.annotation.NonNull;
 

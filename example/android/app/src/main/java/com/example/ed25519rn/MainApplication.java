@@ -10,7 +10,7 @@ import com.facebook.react.ReactInstanceManager;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import com.ed25519rn.Ed25519RnPackage;
+import digital.citra.ed25519rn.Ed25519RnPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
