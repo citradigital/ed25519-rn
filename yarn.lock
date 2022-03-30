@@ -1232,14 +1232,6 @@
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-11.0.0.tgz#719cf05fcc1abb6533610a2e0f5dd1e61eac14fe"
   integrity sha512-VoNqai1vR5anRF5Tuh/+SWDFk7xi7oMwHrHrbm1BprYXjB2RJsWLhUrStMssDxEl5lW/z3EUdg8RvH/IUBccSQ==
 
-"@craftzdog/react-native-buffer@^6.0.4":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@craftzdog/react-native-buffer/-/react-native-buffer-6.0.4.tgz#b9ac7d3c492bfc119e1d52e00ff734b8eda8f561"
-  integrity sha512-2cWejr0rCyALjXJ8UVZjvRIalzJZzGAqsGiCOb7CSgOULqP+yhT+f9PdLQsNE4+ZT3/+8DFrF7S9ZPHrY9RtWg==
-  dependencies:
-    ieee754 "^1.2.1"
-    react-native-quick-base64 "^2.0.0"
-
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
@@ -5043,7 +5035,7 @@ iconv-lite@^0.6.2:
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
-ieee754@^1.1.13, ieee754@^1.2.1:
+ieee754@^1.1.13:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
@@ -7851,13 +7843,6 @@ react-native-builder-bob@^0.18.0:
     yargs "^16.2.0"
   optionalDependencies:
     jetifier "^1.6.6"
-
-react-native-quick-base64@^2.0.0, react-native-quick-base64@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-quick-base64/-/react-native-quick-base64-2.0.2.tgz#1d2af8ddab8f548d89e66208201fe6ce377b1fc5"
-  integrity sha512-bLIAOUhQ0JaVQ9RSQoQdt/lV5/XHpq982J1UwN+Gj42A2GfNtqT8kJzaLjJLO6rWhMZ7iVJeFJIVcTf90pWoJQ==
-  dependencies:
-    base64-js "^1.5.1"
 
 react-native-sha256@^1.4.7:
   version "1.4.7"
