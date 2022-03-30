@@ -143,5 +143,16 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@craftzdog/react-native-buffer": "^6.0.4",
+    "add": "^2.0.6",
+    "array-buffer-to-hex": "^1.0.0",
+    "curve25519-js": "^0.0.4",
+    "fastestsmallesttextencoderdecoder": "^1.0.22",
+    "react-native-quick-base64": "^2.0.2",
+    "react-native-sha256": "^1.4.7",
+    "web-encoding": "^1.1.5",
+    "yarn": "^1.22.18"
   }
 }

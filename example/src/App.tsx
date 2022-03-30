@@ -12,6 +12,7 @@ import {
 import hex from 'string-hex';
 
 export default function App() {
+  console.log('xxxs')
   React.useEffect(() => {
     generateKeypair().then(async (kp) => {
       const pk = await getPublicKey(kp);
