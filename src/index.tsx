@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import android from './index.android'
+import {generateKeypair as androidGenerateKeypair, getPublicKey as androidGetPublicKey, getSharedKey as androidGetSharedKey, sign as androidSign, verify as androidVerify} from './index.android'
 import { generateKeyPair as genKeyPair, sharedKey, sign as curveSign, verify as curveVerify} from 'curve25519-js'
 import arrayBufferToHex from 'array-buffer-to-hex';
 import { TextEncoder } from "web-encoding"
@@ -25,14 +25,14 @@ export const encode = (text:string):Uint8Array =>
   new TextEncoder().encode(text)
 
 export function generateKeypair(): Promise<string> {
-  if (Platform.OS === "android") return android.generateKeypair();
+  if (Platform.OS === "android") return androidGenerateKeypair();
 
   const pair = genKeyPair(encode(random()));
   return Promise.resolve(arrayBufferToHex(pair.private.buffer) + arrayBufferToHex(pair.public.buffer));
 }
 
 export function getPublicKey(keyPair: string): Promise<string> {
-  if (Platform.OS === "android") return android.getPublicKey(keyPair);
+  if (Platform.OS === "android") return androidGetPublicKey(keyPair);
 
   return Promise.resolve(keyPair.slice(64));
 }
@@ -42,7 +42,7 @@ export function getSharedKey(
   otherPublicKey: string
 ): Promise<string> {
 
-  if (Platform.OS === "android") return android.getSharedKey(keyPair, otherPublicKey);
+  if (Platform.OS === "android") return androidGetSharedKey(keyPair, otherPublicKey);
 
   const mine =   hexToArray(keyPair.slice(0, 64));
   const theirs = hexToArray(otherPublicKey);
@@ -52,7 +52,7 @@ export function getSharedKey(
 }
 
 export function sign(keyPair: string, data: string): Promise<string> {
-  if (Platform.OS === "android") return android.sign(keyPair, data);
+  if (Platform.OS === "android") return androidSign(keyPair, data);
 
   const mine = hexToArray(keyPair.slice(0, 64));
 
@@ -63,7 +63,7 @@ export function sign(keyPair: string, data: string): Promise<string> {
 }
 
 export function verify(publicKey: string, data: string, signature: string): Promise<boolean> {
-  if (Platform.OS === "android") return android.verify(publicKey, data, signature);
+  if (Platform.OS === "android") return androidVerify(publicKey, data, signature);
 
   return Promise.resolve(
       curveVerify(
